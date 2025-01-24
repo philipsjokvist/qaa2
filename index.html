@@ -5,14 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Website</title>
     <link rel="stylesheet" href="styles/style.css">
+
+    <script 
+          crossorigin="anonymous"
+          type="application/javascript"
+          src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"
+          data-host="https://9jbe7kcuek4n0b1.se.qlikcloud.com"
+          data-client-id="09458191c21d3bbeada604532e8afe8a"
+          data-access-code="38baa3c0-7b85-41af-aa63-db6741b21d7a.u18o2rkDIH3ljIcl6yW-BSXFdUuUIJfgQ5UsF60lc94"
+          data-auth-type="anonymous"
+    ></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to the Basic Website</h1>
+        <h1>Welcome to Philips QAA Demo Website</h1>
     </header>
     <main>
         <p>This is a simple website structure.</p>
     </main>
+
+    <qlik-embed
+          id="visualization"
+          ui="analytics/chart"
+          app-id="cf6aef72-22b3-4498-b2db-c8a294a782e8"
+          object-id="ZQQQgKF"
+    ></qlik-embed>
+    
     <footer>
         <p>&copy; 2023 Basic Website</p>
     </footer>
