@@ -1,88 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QAA Basic Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QAA Enterprise Demo | Qlik</title>
+  <meta name="description" content="Qlik Anonymous Access enterprise demo with embedded analytics and KPIs." />
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- <script 
-          crossorigin="anonymous"
-          type="application/javascript"
-          src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"
-          data-host="https://9jbe7kcuek4n0b1.se.qlikcloud.com"
-          data-client-id="09458191c21d3bbeada604532e8afe8a"
-          data-access-code="e05a92fb-11fd-49e6-96b1-85cfa5dc9355.N2WvsxSK7dHOb_s5yaaOLtWrd7q1L_f90DAmmy57q3o"
-          data-auth-type="anonymous"
-    ></script> -->
-
-        <script 
-          crossorigin="anonymous"
-          type="application/javascript"
-          src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"
-          data-host="https://9jbe7kcuek4n0b1.se.qlikcloud.com"
-          data-client-id="09458191c21d3bbeada604532e8afe8a"
-          data-access-code="dfb6d776-ce8e-4a5b-9ec6-128f7831d3ad.ic_uz11PkjySphyihl7BKaGI0QWb053qr7Wkn688cog"
-          data-auth-type="anonymous"
-    ></script>
-    
-    
+  <script
+    crossorigin="anonymous"
+    type="application/javascript"
+    src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"
+    data-host="https://9jbe7kcuek4n0b1.se.qlikcloud.com"
+    data-client-id="09458191c21d3bbeada604532e8afe8a"
+    data-access-code="dfb6d776-ce8e-4a5b-9ec6-128f7831d3ad.ic_uz11PkjySphyihl7BKaGI0QWb053qr7Wkn688cog"
+    data-auth-type="anonymous"
+  ></script>
 </head>
 <body>
-    <header>
-        <qlik-embed id="visualization" ui="analytics/selections" app-id="f8aa51d9-f75a-41d9-9d0b-1a662c8158d8"></qlik-embed>
-        <h1>Welcome to Philips Qlik Anonymous Access Demo Website</h1>
-    </header>
-<!--     <main>
-        <p>This is a simple website structure.</p>
-    </main>
- -->
-    <div class="viz">
-      <div id="analytics-chart" class="container">
-      <h2>qlik-embed analytics/chart embeds a chart in the page.</h2>
-<!--       <h3><i>Renders only nebula.js visualizations.</i></h3> -->
-                      <!-- object-id="ETxLEjr" -->
-            <!-- qKQMPmf -->
-        <qlik-embed
-              id="visualization"
-              ui="analytics/chart"
-            app-id="f8aa51d9-f75a-41d9-9d0b-1a662c8158d8"  
-            object-id="qKQMPmf"
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">QAA</span>
+        <span class="brand-text">Qlik Anonymous Access Demo</span>
+      </div>
+    </div>
+    <div class="selections-bar">
+      <div class="container">
+        <qlik-embed ui="analytics/selections" app-id="f8aa51d9-f75a-41d9-9d0b-1a662c8158d8"></qlik-embed>
+      </div>
+    </div>
+  </header>
 
-              
+  <main class="container">
+    <section class="hero">
+      <h1>Welcome to the QAA Enterprise Demo</h1>
+      <p class="subtitle">Explore live analytics securely with Qlik Embedded.</p>
+    </section>
 
-        ></qlik-embed>
-    </div>
-    <div class="space">
-    </div>
-    <div class="viz">
-      <div id="kpi-chart" class="container">
-      <h2> </h2>
-        <h2>kpi-chart: </h2>
-<!--       <h3><i>Renders only nebula.js visualizations.</i></h3> -->
-        <qlik-embed
-              id="visualization"
-              ui="analytics/chart"
-              app-id="f8aa51d9-f75a-41d9-9d0b-1a662c8158d8"
-              object-id="NRJP"
-        ></qlik-embed>
-    </div>
-    <!--<div>
-        <h2>qlik-embed analytics/sheet embeds a sheet in the page.</h2>
-        <qlik-embed id="visualization" ui="analytics/sheet" app-id="741ebbca-f90b-425c-b487-de0565950875" object-id="ntDyKg"></qlik-embed>
-        
-    </div>
-     <div>
-        <h2>qlik-embed classic/app embeds an app in the page.</h2>
-        <qlik-embed id="visualization" ui="classic/app" app-id="741ebbca-f90b-425c-b487-de0565950875"></qlik-embed>
-        
-    </div>-->
+    <section class="grid">
+      <article class="card">
+        <header class="card-header">
+          <h2>Sales Overview</h2>
+          <p class="subtitle">Interactive chart</p>
+        </header>
+        <div id="analytics-chart" class="embed">
+          <qlik-embed
+            ui="analytics/chart"
+            app-id="f8aa51d9-f75a-41d9-9d0b-1a662c8158d8"
+            object-id="qKQMPmf">
+          </qlik-embed>
+        </div>
+      </article>
 
-        
-        
-    <footer>
-        <p>&copy; 2025 QAA Demo Philip Sjökvist, Qlik</p>
-    </footer>
-    <script src="main.js"></script>
+      <article class="card">
+        <header class="card-header">
+          <h2>Key KPIs</h2>
+          <p class="subtitle">At-a-glance metrics</p>
+        </header>
+        <div id="kpi-chart" class="embed">
+          <qlik-embed
+            ui="analytics/chart"
+            app-id="f8aa51d9-f75a-41d9-9d0b-1a662c8158d8"
+            object-id="NRJP">
+          </qlik-embed>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 QAA Demo — Philip Sjökvist, Qlik</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
