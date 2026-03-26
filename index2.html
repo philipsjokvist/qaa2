@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anonymous Access Demo | Qlik</title>
+  <meta name="description" content="Qlik Anonymous Access enterprise demo with embedded analytics and KPIs." />
+  <link rel="stylesheet" href="style.css" />
+
+  <script
+    crossorigin="anonymous"
+    type="application/javascript"
+    src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"
+    data-host="https://pjk-aademo.se.qlikcloud.com"
+    data-client-id="09458191c21d3bbeada604532e8afe8a"
+    data-access-code="b05996ba-9ab2-4eb1-a232-202615441489.2dW6SzNNjc634wnLfhKjJZQuxxAcsEgKGBHvX4Kbz-Y"
+    data-auth-type="anonymous"
+  ></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- <span class="logo" aria-hidden="true">QAA</span> -->
+        <span class="brand-text">Qlik Anonymous Access Demo</span>
+      </div>
+    </div>
+    <div class="selections-bar">
+      <div class="container">
+        <qlik-embed ui="analytics/selections" app-id="f1fd972e-bd58-43a2-b036-6cce054d0b9b"></qlik-embed>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Welcome to the Qlik Anonymous Access Demo</h1>
+      <p class="subtitle">Explore live analytics securely with <a href="https://qlik.dev/embed/qlik-embed/" target="_blank" rel="noopener noreferrer">qlik-embed</a>.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <header class="card-header">
+          <h2>Sales Overview</h2>
+          <p class="subtitle">Interactive chart</p>
+        </header>
+        <div id="analytics-chart" class="embed">
+          <qlik-embed
+            ui="analytics/chart"
+            app-id="f1fd972e-bd58-43a2-b036-6cce054d0b9b"
+            object-id="QDDZwTu">
+          </qlik-embed>
+        </div>
+      </article>
+
+      <article class="card">
+        <header class="card-header">
+          <h2>Key KPIs</h2>
+          <p class="subtitle">At-a-glance metrics</p>
+        </header>
+        <div id="kpi-chart" class="embed">
+          <qlik-embed
+            ui="analytics/chart"
+            app-id="f1fd972e-bd58-43a2-b036-6cce054d0b9b"
+            object-id="bdbbDv">
+          </qlik-embed>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 QAA Demo: Philip Sjökvist, Qlik</p>
+      <p><a href="https://9jbe7kcuek4n0b1.se.qlikcloud.com/sense/app/f8aa51d9-f75a-41d9-9d0b-1a662c8158d8?eac=b05996ba-9ab2-4eb1-a232-202615441489.yoWWJT9iwXZlM1T72c6Q4RhyKy27WHBj55rdLKOVHfs" target="_blank" rel="noopener noreferrer">Open the full app in Qlik Cloud</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  
+</body>
+</html>
